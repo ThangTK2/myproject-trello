@@ -10,13 +10,14 @@ import Templates from './Menus/Templates';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import Profiles from './Menus/Profiles';
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 
 
 function AppBar() {
   return (
     <Box px={1} sx={{ width: '100%', height: (theme) => theme.trello.appBarHeight, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2, overflowX: 'auto' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <AppsIcon sx={{}}/>
+        <AppsIcon />
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <SvgIcon component={TrelloIcon} inheritViewBox />
           <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'primary.main' }}>TK2 - Trello</Typography>
@@ -26,7 +27,7 @@ function AppBar() {
           <Recents/>
           <Starred/>
           <Templates/>
-          <Button variant="outlined" >Tạo mới</Button>
+          <Button variant="outlined" startIcon={<LibraryAddIcon/>}>Tạo mới</Button>
         </Box>
       </Box>
 
