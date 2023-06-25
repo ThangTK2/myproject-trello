@@ -8,18 +8,18 @@ const theme = extendTheme({
     boardBarHeight: '60px'
   },
   colorSchemes: {
-    light: {
-      palette: {
-        primary: pink,
-        secondary: deepOrange
-      }
-    },
-    dark: {
-      palette: {
-        primary: cyan,
-        secondary: orange
-      }
-    }
+    // light: {
+    //   palette: {
+    //     primary: pink,
+    //     secondary: deepOrange
+    //   }
+    // },
+    // dark: {
+    //   palette: {
+    //     primary: cyan,
+    //     secondary: orange
+    //   }
+    // }
   },
   components: {
     MuiCssBaseline:{ //css thanh scrollX
@@ -31,10 +31,10 @@ const theme = extendTheme({
           },
           '*::-webkit-scrollbar-thumb': {
             borderRadius: '8px',
-            backgroundColor: '#bdc3c7'
+            backgroundColor: '#dcdde1'
           },
           '*::-webkit-scrollbar-thumb:hover': {
-            backgroundColor: 'pink'
+            backgroundColor: 'white'
           }
         }
       }
@@ -42,35 +42,41 @@ const theme = extendTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none'//textTransform thành chữ thường
+          textTransform: 'none',//textTransform thành chữ thường
+          borderWidth: '1px',
+          '&:hover': { borderWidth: '1px' }
         }
       }
     },
     MuiInputLabel: {
       styleOverrides: {
-        root: ({ theme }) => ({
-          color: theme.palette.primary.main,
+        root: {
+          // color: theme.palette.primary.main,
           fontSize: '0.875rem'
-        })
+        }
       }
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: ({ theme }) => { //có {} chỗ ni thì phải return
-          return {
-            color: theme.palette.primary.main,
-            fontSize: '0.875rem',
-            '.MuiOutlinedInput-notchedOutline': {
-              borderColor: theme.palette.primary.light
-            },
-            ':hover': {
-              '.MuiOutlinedInput-notchedOutline': {
-                borderColor: theme.palette.primary.main
-              }
-            },
-            '& fieldset':{ //border chỗ nút search khi ta nhấn vào thì nó sẽ không làm đậm lên
-              borderWidth: '1px !important'
-            }
+        root: {
+          // color: theme.palette.primary.main,
+          fontSize: '0.875rem',
+          // '.MuiOutlinedInput-notchedOutline': {
+          //   borderColor: theme.palette.primary.light
+          // },
+          // ':hover': {
+          //   '.MuiOutlinedInput-notchedOutline': {
+          //     borderColor: theme.palette.primary.main
+          //   }
+          // },
+          '& fieldset':{ //border chỗ nút search khi ta nhấn vào thì nó sẽ không làm đậm lên
+            borderWidth: '1px !important'
+          },
+          '&:hover fieldset':{
+            borderWidth: '2px !important'
+          },
+          '&.Mui-focused fieldset':{
+            borderWidth: '2px !important'
           }
         }
       }
