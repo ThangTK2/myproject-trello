@@ -9,12 +9,21 @@ import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 
 const MENU_STYLE = {
-  color: 'primary.main', bgcolor: 'transparent', border: 'none', paddingX: '5px', '& .MuiSvgIcon-root': { color:'primary.main' }, '&:hover': { bgcolor: 'primary.50' }
+  color: 'white', bgcolor: 'transparent', border: 'none', paddingX: '5px', '& .MuiSvgIcon-root': { color:'white' }, '&:hover': { bgcolor: 'primary.6  0' }
 }
 
 function BoarBar() {
   return (
-    <Box px={1} sx={{ width: '100%', height: (theme) => theme.trello.boardBarHeight, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 2, overflowX: 'auto', borderTop: '1px solid #ccc' }}>
+    <Box px={1} sx={{ width: '100%',
+      height: (theme) => theme.trello.boardBarHeight,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: 2,
+      overflowX: 'auto',
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#87CEFA'),
+      borderBottom: '1px solid #fff'
+    }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <Chip
           sx={MENU_STYLE}
@@ -39,13 +48,18 @@ function BoarBar() {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <Button variant="outlined" startIcon={<PersonAddAlt1Icon/>}>Mời</Button>
+        <Button
+          variant="outlined"
+          startIcon={<PersonAddAlt1Icon/>}
+          sx={{ color: 'white', borderColor: 'white', '&:hover': { borderColor: 'white' } }}
+        >Mời</Button>
         <AvatarGroup
           max={3}
           sx={{
             '& .MuiAvatar-root': {
               width: 34, height: 34,
-              fontSize: 16
+              fontSize: 16,
+              // border: 'none'
             }
           }}
         >
