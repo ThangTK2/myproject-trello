@@ -60,17 +60,20 @@ function BoarBar() {
               width: 34, height: 34,
               fontSize: 16,
               // border: 'none'
+              color: 'white',
+              cursor: 'pointer',
+              '&: first-of-type': { bgcolor: '#a4b0be' }
             }
           }}
         >
           <Tooltip title='TK2'>
-            <Avatar alt="TK2" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/346830052_1111798053110034_3344074448717637961_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k-FcrRtlI_YAX9K0W2S&_nc_ht=scontent.fhan14-4.fna&oh=00_AfC5WgPe2oUltvpQYYPrwORo-1k9KUWdBLOyRaxLPuAOSg&oe=64999FE6" />
+            <Avatar alt="TK2" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/346830052_1111798053110034_3344074448717637961_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZCH73vb5gVQAX-wfL1o&_nc_ht=scontent.fhan2-5.fna&oh=00_AfBK5L2R_7Xj3lHScySh2aw6zqhQgkPEtc3jHuQmbbIy3A&oe=64A57D66" />
           </Tooltip>
           <Tooltip title='TK2'>
             <Avatar alt="TK2" src="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.6435-9/106802319_2561242120856530_6440393362921062800_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=qu6tD5QndJMAX8hqkrT&_nc_ht=scontent.fhan14-3.fna&oh=00_AfD9_UgzIxyFBPkZmQsK3lF2NdtthYhyOXWpg1kYYny6TQ&oe=64BCCA33" />
           </Tooltip>
           <Tooltip title='TK2'>
-            <Avatar alt="TK2" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/346830052_1111798053110034_3344074448717637961_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k-FcrRtlI_YAX9K0W2S&_nc_ht=scontent.fhan14-4.fna&oh=00_AfC5WgPe2oUltvpQYYPrwORo-1k9KUWdBLOyRaxLPuAOSg&oe=64999FE6" />
+            <Avatar alt="TK2" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/346830052_1111798053110034_3344074448717637961_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZCH73vb5gVQAX-wfL1o&_nc_ht=scontent.fhan2-5.fna&oh=00_AfBK5L2R_7Xj3lHScySh2aw6zqhQgkPEtc3jHuQmbbIy3A&oe=64A57D66" />
           </Tooltip>
           <Tooltip title='TK2'>
             <Avatar alt="TK2" src="https://scontent.fhan14-3.fna.fbcdn.net/v/t1.6435-9/106802319_2561242120856530_6440393362921062800_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=qu6tD5QndJMAX8hqkrT&_nc_ht=scontent.fhan14-3.fna&oh=00_AfD9_UgzIxyFBPkZmQsK3lF2NdtthYhyOXWpg1kYYny6TQ&oe=64BCCA33" />

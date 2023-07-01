@@ -25,7 +25,7 @@ function Profiles() {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar sx={{ width: 32, height: 32 }}
-            src='https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/346830052_1111798053110034_3344074448717637961_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k-FcrRtlI_YAX9K0W2S&_nc_ht=scontent.fhan14-4.fna&oh=00_AfC5WgPe2oUltvpQYYPrwORo-1k9KUWdBLOyRaxLPuAOSg&oe=64999FE6'
+            src='https://scontent.fhan14-3.fna.fbcdn.net/v/t1.6435-9/106802319_2561242120856530_6440393362921062800_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=qu6tD5QndJMAX8hqkrT&_nc_ht=scontent.fhan14-3.fna&oh=00_AfD9_UgzIxyFBPkZmQsK3lF2NdtthYhyOXWpg1kYYny6TQ&oe=64BCCA33'
             alt='Lỗi hiển thị'
           >TK2</Avatar>
         </IconButton>
