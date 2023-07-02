@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import ModeSelect from '~/components/ModeSelect';
+import ModeSelect from '~/components/ModeSelect/ModeSelect';
 import AppsIcon from '@mui/icons-material/Apps';
 import { ReactComponent as TrelloIcon } from '~/assets/trello.svg';
 import { Badge, Button, InputAdornment, SvgIcon, TextField, Tooltip, Typography } from '@mui/material';
@@ -64,7 +64,7 @@ function AppBar() {
               />
             )
           }}
-          sx={{ 
+          sx={{
             minWidth: 120,
             '& label': { color: 'white' },
             '& input': { color: 'white' },
