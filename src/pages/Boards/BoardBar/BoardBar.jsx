@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Box from '@mui/material/Box';
 import { Avatar, AvatarGroup, Button, Chip, Tooltip } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -6,13 +7,14 @@ import AddToDriveIcon from '@mui/icons-material/AddToDrive';
 import BoltIcon from '@mui/icons-material/Bolt';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import { capitalizeFirstLetter } from '~/utils/formatters'
 
 
 const MENU_STYLE = {
   color: 'white', bgcolor: 'transparent', border: 'none', paddingX: '5px', '& .MuiSvgIcon-root': { color:'white' }, '&:hover': { bgcolor: 'primary.6  0' }
 }
 
-function BoarBar() {
+function BoarBar({ board }) {
   return (
     <Box px={1} sx={{ width: '100%',
       height: (theme) => theme.trello.boardBarHeight,
@@ -27,11 +29,11 @@ function BoarBar() {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <Chip
           sx={MENU_STYLE}
-          icon={<DashboardIcon />} label="NguyenHuuThang - TK2" clickable
+          icon={<DashboardIcon />} label={board?.title} clickable
         />
         <Chip
           sx={MENU_STYLE}
-          icon={<VpnLockIcon />} label="Public/Private" clickable
+          icon={<VpnLockIcon />} label={capitalizeFirstLetter(board?.type)} clickable
         />
         <Chip
           sx={MENU_STYLE}
