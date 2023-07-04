@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Box } from '@mui/material';
 import TrelloCard from './Card/Card';
 
-function ListCards() {
+function ListCards({ cards }) {
   return (
     <div>
       <Box sx={{
@@ -16,10 +17,7 @@ function ListCards() {
         '&::-webkit-scrollbar-thumb': { backgroundColor: '#ced0da' },
         '&::-webkit-scrollbar-thumb:hover': { backgroundColor: '#bfc2cf' }
       }}>
-        <TrelloCard/>
-        <TrelloCard temporaryHideMedia/>
-        <TrelloCard temporaryHideMedia/>
-        <TrelloCard temporaryHideMedia/>
+        {cards?.map(card => <TrelloCard key={card._id} card={card} />)} {/* ?.: dùng để thay cho if khi ta check điều kiện-> vd: if(cards.map){...} */}
       </Box>
     </div>
   )

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Cloud, ContentCopy, ContentCut, ContentPaste } from '@mui/icons-material';
 import { Button, Divider, ListItemIcon, ListItemText, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -7,8 +9,9 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCardIcon from '@mui/icons-material/AddCard';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import ListCards from './ListCards/ListCards';
+import { mapOrder } from '~/utils/sort'
 
-function Column() {
+function Column({ column }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -17,6 +20,8 @@ function Column() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const orderedCard = mapOrder(column?.cards, column?.cardOrderIds, '_id')
 
   return (
     <Box sx={{
@@ -41,7 +46,7 @@ function Column() {
           fontSize: '1rem',
           cursor: 'pointer'
         }}>
-          Column Title
+          {column?.title} {/* ?.: dùng để thay cho if khi ta check điều kiện-> vd: if(column.title){...} */}
         </Typography>
         <Box>
           <Tooltip title="Lựa chọn khác">
@@ -93,7 +98,7 @@ function Column() {
       </Box>
 
       {/* ListCards */}
-      <ListCards/>
+      <ListCards cards={orderedCard} />
 
       {/* footer */}
       <Box sx={{
