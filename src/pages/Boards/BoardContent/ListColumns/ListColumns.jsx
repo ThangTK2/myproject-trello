@@ -4,9 +4,13 @@ import Column from './Column/Column';
 import { Button } from '@mui/material';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 
+import { SortableContext, horizontalListSortingStrategy } from '@dnd-kit/sortable'
+
 function ListColumns({ columns }) {
+  // SortableContext yêu cầu items là 1 mảng dạng ['id-1', 'id-2'] chứ không phải [{id: 'id-1'}, {id: 'id-2'}]
+  // Nếu không đúng thì vẫn kéo thả được nhưng không có animation
   return (
-    <div>
+    <SortableContext items={columns?.map(c => c._id)} strategy={horizontalListSortingStrategy}>
       <Box sx={{
         bgcolor: 'inherit', //inherit: kế thừa background của thằng ngoài cùng
         width: '100%',
@@ -34,7 +38,7 @@ function ListColumns({ columns }) {
         </Box>
 
       </Box>
-    </div>
+    </SortableContext>
   )
 }
 
